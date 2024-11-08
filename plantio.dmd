@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="plantio" id="D895613A-2FB3-8339-C723-6313A220E4B6" version="3.5">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:26:57 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D895613A-2FB3-8339-C723-6313A220E4B6</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="337BCDD4-70D1-6A05-5364-3DB9B23F5EFA">
+<designStoragePath>/plantio</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

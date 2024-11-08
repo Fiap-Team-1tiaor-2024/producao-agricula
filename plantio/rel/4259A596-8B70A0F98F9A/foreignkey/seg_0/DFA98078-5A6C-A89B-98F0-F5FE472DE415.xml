@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DFA98078-5A6C-A89B-98F0-F5FE472DE415" containerWithKeyObject="FEB41600-9BEE-73B4-E2A0-EF477075A12C" localFKIndex="34562F9A-DF38-8A5D-6690-1DE4D61B24E1" name="Producao_Safra_FK">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>256A0C60-A14D-9E5D-DECE-417766ACCD32</importedID>
+<referredTableLongName>Safra</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>21449BE0-59B6-436D-A59F-A61967D1A070</referredTableID>
+<keyObject>4B6CB2B1-F318-EB44-B272-7A17593356DE</keyObject>
+<referredKeyID>4B6CB2B1-F318-EB44-B272-7A17593356DE</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_safra</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

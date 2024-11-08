@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Estado" directorySegmentName="seg_0" id="5C4B8BE5-135D-71E7-90AE-F52AE00243E7">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nome" id="09FCA845-CF65-8329-3CD9-E73BCC6BB076">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_estado" id="FA8CCFBA-F17B-B811-6D2F-CDDF02CE2882">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Estado_PK" id="CC0A3F92-C2B2-93CB-3531-D9A7F8841B9B">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

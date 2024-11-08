@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D2947E1A-EFC1-79AF-56BF-6E427334F2B7" containerWithKeyObject="FEB41600-9BEE-73B4-E2A0-EF477075A12C" localFKIndex="89739E66-F1F6-D8E2-4727-73CC9FC45937" name="Producao_Estado_FK">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>58791C1C-7F06-0E2E-0F7A-11ED62461C2C</importedID>
+<referredTableLongName>Estado</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5C4B8BE5-135D-71E7-90AE-F52AE00243E7</referredTableID>
+<keyObject>CC0A3F92-C2B2-93CB-3531-D9A7F8841B9B</keyObject>
+<referredKeyID>CC0A3F92-C2B2-93CB-3531-D9A7F8841B9B</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_estado</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21449BE0-59B6-436D-A59F-A61967D1A070" name="Safra">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>BC1191E4-C4B5-B021-A34F-85248F5B36BD</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_safra" id="DE4D9724-7448-2FA3-5821-A3853B673716">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>165FEAAB-CE3A-677F-387C-F049E3588869</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>2A8EA31B-6921-CED9-CA0B-22E763B824BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ano" id="B717877E-5C90-D369-5E9B-42255506566A">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>B4E1DFF5-5C87-E0C1-19DE-197C367B78FB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>2A8EA31B-6921-CED9-CA0B-22E763B824BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B6CB2B1-F318-EB44-B272-7A17593356DE" name="Safra_PK">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>29646E5A-968B-6851-0C49-B5D218F48177</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE4D9724-7448-2FA3-5821-A3853B673716"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

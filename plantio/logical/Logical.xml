@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="F314A290-F12C-13C5-B54A-C2F773A31829" mainViewID="CFB2F370-F3DF-1059-83BB-4EF7C88E6C5D">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:26:57 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

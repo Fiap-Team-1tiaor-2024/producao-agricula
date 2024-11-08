@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FEB41600-9BEE-73B4-E2A0-EF477075A12C" name="Producao">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>17358D04-D070-8038-D27F-DCA5699E699B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_producao" id="4F40C9B5-94EC-7538-D160-40AD63B6FEB8">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>0BA668F7-9ACD-4402-3335-0F40548CECB9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>2A8EA31B-6921-CED9-CA0B-22E763B824BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_cultura" id="4C398909-F885-4136-EF2C-506603F9DE47">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>62E2D468-B4D2-1065-3CA8-EC0C6DAD8F45</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>2A8EA31B-6921-CED9-CA0B-22E763B824BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C9F4E95E-CFFE-B51A-464A-548505D4445C" referredColumn="7298CFE2-C415-E948-E13E-297DC9A9E599"/>
+</associations>
+</Column>
+<Column name="id_estado" id="E7CA4E06-52B8-322E-EE2F-11C4747D569D">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>6D047B25-94BF-C458-5DF3-185A20D3EEC2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>2A8EA31B-6921-CED9-CA0B-22E763B824BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D2947E1A-EFC1-79AF-56BF-6E427334F2B7" referredColumn="FA8CCFBA-F17B-B811-6D2F-CDDF02CE2882"/>
+</associations>
+</Column>
+<Column name="id_safra" id="4BE4179F-5284-4E9A-1A42-EBAD1DB06045">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>6D76AC92-9B15-45ED-C50D-DAD9C7590AD3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>2A8EA31B-6921-CED9-CA0B-22E763B824BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFA98078-5A6C-A89B-98F0-F5FE472DE415" referredColumn="DE4D9724-7448-2FA3-5821-A3853B673716"/>
+</associations>
+</Column>
+<Column name="area_plantada" id="755C77EA-D8EF-3E98-BCA1-49ABCF0194DB">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>568D073A-6B3C-204B-AC79-2D9CA614750E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B7D31717-FF02-905A-6F33-C26FE986FEC4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="producao" id="49C35EA4-3AC0-25D2-56AA-0507C1269D9B">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>2E7949BD-7F87-EE04-64B7-D8C9D76AAEC1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B7D31717-FF02-905A-6F33-C26FE986FEC4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="produtividade" id="6F740AC0-B8C7-13A1-7136-34136183D3E9">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>34707FEE-1BD7-0558-26D4-0F8A129482D7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B7D31717-FF02-905A-6F33-C26FE986FEC4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3A2CACEF-3191-1AD5-8626-A40837AB00BA" name="Producao_PK">
+<sourceDDLFile>plantio.sql</sourceDDLFile>
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<importedID>ACF3E822-2CA4-B729-BCBA-343DF1E2F2B1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F40C9B5-94EC-7538-D160-40AD63B6FEB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="95665ABB-7ACE-3760-8E06-F1B313C7F6BC" name="Producao_Cultura_FK">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C398909-F885-4136-EF2C-506603F9DE47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89739E66-F1F6-D8E2-4727-73CC9FC45937" name="Producao_Estado_FK">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7CA4E06-52B8-322E-EE2F-11C4747D569D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34562F9A-DF38-8A5D-6690-1DE4D61B24E1" name="Producao_Safra_FK">
+<createdBy>gustavo.rossignolli</createdBy>
+<createdTime>2024-11-08 16:27:23 UTC</createdTime>
+<ownerDesignName>plantio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BE4179F-5284-4E9A-1A42-EBAD1DB06045"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
