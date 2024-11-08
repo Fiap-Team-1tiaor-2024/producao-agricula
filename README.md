@@ -26,8 +26,7 @@ Alguns dos órgãos citados disponibilizam diversas informações sobre a agricu
 
 
 ## Modelo Relacional
-![image](https://github.com/user-attachments/assets/6f6e3594-1483-46bc-9c03-7dd722174fb2)
-
+![image](https://github.com/user-attachments/assets/eb68b900-d0cd-4385-bccb-575200497a36)
 
 ## Estrutura das Tabelas
 ```sql
