@@ -148,3 +148,27 @@ INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantad
 INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (98, 10, 1, 8, 65000, 195000, 3000);
 INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (99, 10, 1, 9, 60000, 180000, 3000);
 INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (100, 10, 1, 10, 55000, 165000, 3000);
+
+SELECT e.nome AS Estado, SUM(p.producao) AS Producao_Total
+FROM Producao p
+JOIN Estado e ON p.id_estado = e.id_estado
+JOIN Cultura c ON p.id_cultura = c.id_cultura
+JOIN Safra s ON p.id_safra = s.id_safra
+WHERE c.id_cultura = 1 AND s.ano = 2023
+GROUP BY e.nome;
+
+SELECT s.ano, SUM(p.area_plantada) AS Area_Plantada_Total
+FROM Producao p
+JOIN Cultura c ON p.id_cultura = c.id_cultura
+JOIN Safra s ON p.id_safra = s.id_safra
+WHERE c.id_cultura = 2
+GROUP BY s.ano
+ORDER BY s.ano;
+
+SELECT e.nome AS Estado, AVG(p.produtividade) AS Produtividade_Media
+FROM Producao p
+JOIN Estado e ON p.id_estado = e.id_estado
+JOIN Cultura c ON p.id_cultura = c.id_cultura
+WHERE c..id_cultura = 3
+GROUP BY e.nome
+ORDER BY Produtividade_Media DESC;
