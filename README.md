@@ -63,10 +63,9 @@ CREATE TABLE Producao (
 
 ### Tabela Estado
 ```sql
-INSERT INTO Estado (ID_Estado, Nome_Estado, Região) VALUES
-(1, 'São Paulo', 'Sudeste'),
-(2, 'Minas Gerais', 'Sudeste'),
-(3, 'Paraná', 'Sul');
+INSERT INTO Estado (id_estado, nome) VALUES (1, 'São Paulo');
+INSERT INTO Estado (id_estado, nome) VALUES (2, 'Minas Gerais');
+INSERT INTO Estado (id_estado, nome) VALUES (3, 'Paraná');
 ```
 
 ### Tabela Cultura
@@ -76,12 +75,24 @@ INSERT INTO Cultura (id_cultura, nome) VALUES (2, 'Milho');
 INSERT INTO Cultura (id_cultura, nome) VALUES (3, 'Café');
 ```
 
+### Tabela Safra
+```sql
+INSERT INTO Safra (id_safra, ano) VALUES (1, 2023);
+INSERT INTO Safra (id_safra, ano) VALUES (2, 2022);
+INSERT INTO Safra (id_safra, ano) VALUES (3, 2021);
+```
+
 ### Tabela Produção
 ```sql
-INSERT INTO Produção (ID_Produção, Ano, Área_Plantada, Produção_Total, Produtividade, ID_Estado, ID_Cultura) VALUES
-(1, 2023, 1500.00, 4500.00, 3.00, 1, 1),
-(2, 2023, 1200.00, 3600.00, 3.00, 2, 2),
-(3, 2023, 800.00, 2400.00, 3.00, 3, 3);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (1, 1, 1, 1, 10000, 30000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (2, 1, 2, 1, 15000, 45000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (3, 1, 3, 1, 20000, 60000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (4, 2, 1, 2, 12000, 36000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (5, 2, 2, 2, 18000, 54000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (6, 2, 3, 2, 22000, 66000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (7, 3, 1, 3, 8000, 24000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (8, 3, 2, 3, 9000, 27000, 3000);
+INSERT INTO Producao (id_producao, id_cultura, id_estado, id_safra, area_plantada, producao, produtividade) VALUES (9, 3, 3, 3, 10000, 30000, 3000);
 ```
 
 ## Consultas SQL de Exemplo
