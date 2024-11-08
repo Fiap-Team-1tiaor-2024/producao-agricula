@@ -22,34 +22,41 @@ Alguns dos órgãos citados disponibilizam diversas informações sobre a agricu
 
 
 ## Modelo Entidade-Relacionamento (MER)
-![image](https://github.com/user-attachments/assets/bad0b784-fb29-42d0-901c-8d1b2d7f3106)
+![image](https://github.com/user-attachments/assets/20dc8fe9-273a-4c1f-bc2b-ddbbff36db4d)
+
 
 ## Modelo Relacional
-![image](https://github.com/user-attachments/assets/c2155215-669a-4422-83d7-40e8c18f853d)
+![image](https://github.com/user-attachments/assets/6f6e3594-1483-46bc-9c03-7dd722174fb2)
+
 
 ## Estrutura das Tabelas
 ```sql
-CREATE TABLE Estado (
-    ID_Estado INT PRIMARY KEY,
-    Nome_Estado VARCHAR(100),
-    Região VARCHAR(50)
-);
-
 CREATE TABLE Cultura (
-    ID_Cultura INT PRIMARY KEY,
-    Nome_Cultura VARCHAR(100)
+    id_cultura INT PRIMARY KEY,
+    nome VARCHAR(100)
 );
 
-CREATE TABLE Produção (
-    ID_Produção INT PRIMARY KEY,
-    Ano INT,
-    Área_Plantada DECIMAL(10, 2),
-    Produção_Total DECIMAL(10, 2),
-    Produtividade DECIMAL(10, 2),
-    ID_Estado INT,
-    ID_Cultura INT,
-    FOREIGN KEY (ID_Estado) REFERENCES Estado(ID_Estado),
-    FOREIGN KEY (ID_Cultura) REFERENCES Cultura(ID_Cultura)
+CREATE TABLE Estado (
+    id_estado INT PRIMARY KEY,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE Safra (
+    id_safra INT PRIMARY KEY,
+    ano INT
+);
+
+CREATE TABLE Producao (
+    id_producao INT PRIMARY KEY,
+    id_cultura INT,
+    id_estado INT,
+    id_safra INT,
+    area_plantada DECIMAL,
+    producao DECIMAL,
+    produtividade DECIMAL,
+    FOREIGN KEY (id_cultura) REFERENCES Cultura(id_cultura),
+    FOREIGN KEY (id_estado) REFERENCES Estado(id_estado),
+    FOREIGN KEY (id_safra) REFERENCES Safra(id_safra)
 );
 ```
 
@@ -65,10 +72,9 @@ INSERT INTO Estado (ID_Estado, Nome_Estado, Região) VALUES
 
 ### Tabela Cultura
 ```sql
-INSERT INTO Cultura (ID_Cultura, Nome_Cultura) VALUES
-(1, 'Soja'),
-(2, 'Milho'),
-(3, 'Café');
+INSERT INTO Cultura (id_cultura, nome) VALUES (1, 'Soja');
+INSERT INTO Cultura (id_cultura, nome) VALUES (2, 'Milho');
+INSERT INTO Cultura (id_cultura, nome) VALUES (3, 'Café');
 ```
 
 ### Tabela Produção
@@ -83,28 +89,52 @@ INSERT INTO Produção (ID_Produção, Ano, Área_Plantada, Produção_Total, Pr
 
 ### Produção total de uma determinada cultura por estado em uma safra
 ```sql
-SELECT Estado.Nome_Estado, SUM(Produção.Produção_Total) AS Produção_Total
-FROM Produção
-JOIN Estado ON Produção.ID_Estado = Estado.ID_Estado
-WHERE Produção.Ano = 2023 AND Produção.ID_Cultura = 1
-GROUP BY Estado.Nome_Estado;
+SELECT e.nome AS Estado, SUM(p.producao) AS Producao_Total
+FROM Producao p
+JOIN Estado e ON p.id_estado = e.id_estado
+JOIN Cultura c ON p.id_cultura = c.id_cultura
+JOIN Safra s ON p.id_safra = s.id_safra
+WHERE c.nome = 'Soja' AND s.ano = 2023
+GROUP BY e.nome;
 ```
 
 ### Evolução da área plantada de uma cultura ao longo dos anos
 ```sql
-SELECT Ano, SUM(Área_Plantada) AS Área_Total
-FROM Produção
-WHERE ID_Cultura = 1
-GROUP BY Ano
-ORDER BY Ano;
+SELECT s.ano, SUM(p.area_plantada) AS Area_Plantada_Total
+FROM Producao p
+JOIN Cultura c ON p.id_cultura = c.id_cultura
+JOIN Safra s ON p.id_safra = s.id_safra
+WHERE c.nome = 'Milho'
+GROUP BY s.ano
+ORDER BY s.ano;
 ```
 
 ### Ranking dos estados com maior produtividade em uma cultura específica
 ```sql
-SELECT Estado.Nome_Estado, AVG(Produção.Produtividade) AS Produtividade_Média
-FROM Produção
-JOIN Estado ON Produção.ID_Estado = Estado.ID_Estado
-WHERE Produção.ID_Cultura = 1
-GROUP BY Estado.Nome_Estado
-ORDER BY Produtividade_Média DESC;
+SELECT e.nome AS Estado, AVG(p.produtividade) AS Produtividade_Media
+FROM Producao p
+JOIN Estado e ON p.id_estado = e.id_estado
+JOIN Cultura c ON p.id_cultura = c.id_cultura
+WHERE c.nome = 'Café'
+GROUP BY e.nome
+ORDER BY Produtividade_Media DESC;
 ```
+## Dicionário de Dados
+1. Cultura: Armazena informações sobre as culturas agrícolas.
+* id_cultura: Identificador único da cultura.
+* nome: Nome da cultura.
+2. Estado: Armazena informações sobre os estados.
+* id_estado: Identificador único do estado.
+* nome: Nome do estado.
+3. Safra: Armazena informações sobre as safras.
+* id_safra: Identificador único da safra.
+* ano: Ano da safra.
+3. Producao: Armazena informações sobre a produção agrícola.
+* id_producao: Identificador único da produção.
+* id_cultura: Identificador da cultura.
+* id_estado: Identificador do estado.
+* id_safra: Identificador da safra.
+* area_plantada: Área plantada em hectares.
+* producao: Produção total em toneladas.
+* produtividade: Produtividade em kg/ha.
+
