@@ -30,13 +30,14 @@ Alguns dos órgãos citados disponibilizam diversas informações sobre a agricu
 
 ## Estrutura das Tabelas
 ```sql
-CREATE TABLE Cultura (
-    id_cultura INT PRIMARY KEY,
-    nome VARCHAR(100)
-);
 
 CREATE TABLE Estado (
     id_estado INT PRIMARY KEY,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE Cultura (
+    id_cultura INT PRIMARY KEY,
     nome VARCHAR(100)
 );
 
@@ -77,16 +78,16 @@ INSERT INTO Estado (id_estado, nome) VALUES (10, 'Tocantins');
 
 ### Tabela Cultura
 ```sql
-INSERT INTO Estado (id_estado, nome) VALUES (1, 'Mato Grosso');
-INSERT INTO Estado (id_estado, nome) VALUES (2, 'Paraná');
-INSERT INTO Estado (id_estado, nome) VALUES (3, 'Rio Grande do Sul');
-INSERT INTO Estado (id_estado, nome) VALUES (4, 'Goiás');
-INSERT INTO Estado (id_estado, nome) VALUES (5, 'Mato Grosso do Sul');
-INSERT INTO Estado (id_estado, nome) VALUES (6, 'Minas Gerais');
-INSERT INTO Estado (id_estado, nome) VALUES (7, 'São Paulo');
-INSERT INTO Estado (id_estado, nome) VALUES (8, 'Bahia');
-INSERT INTO Estado (id_estado, nome) VALUES (9, 'Santa Catarina');
-INSERT INTO Estado (id_estado, nome) VALUES (10, 'Tocantins');
+INSERT INTO Cultura (id_cultura, nome) VALUES (1, 'Soja');
+INSERT INTO Cultura (id_cultura, nome) VALUES (2, 'Milho');
+INSERT INTO Cultura (id_cultura, nome) VALUES (3, 'Arroz');
+INSERT INTO Cultura (id_cultura, nome) VALUES (4, 'Cana-de-açúcar');
+INSERT INTO Cultura (id_cultura, nome) VALUES (5, 'Feijão');
+INSERT INTO Cultura (id_cultura, nome) VALUES (6, 'Algodão');
+INSERT INTO Cultura (id_cultura, nome) VALUES (7, 'Café');
+INSERT INTO Cultura (id_cultura, nome) VALUES (8, 'Laranja');
+INSERT INTO Cultura (id_cultura, nome) VALUES (9, 'Mandioca');
+INSERT INTO Cultura (id_cultura, nome) VALUES (10, 'Trigo');
 ```
 
 ### Tabela Safra
@@ -226,7 +227,7 @@ FROM Producao p
 JOIN Estado e ON p.id_estado = e.id_estado
 JOIN Cultura c ON p.id_cultura = c.id_cultura
 JOIN Safra s ON p.id_safra = s.id_safra
-WHERE c.nome = 'Soja' AND s.ano = 2023
+WHERE c.id_cultura = 1 AND s.ano = 2023
 GROUP BY e.nome;
 ```
 
@@ -236,7 +237,7 @@ SELECT s.ano, SUM(p.area_plantada) AS Area_Plantada_Total
 FROM Producao p
 JOIN Cultura c ON p.id_cultura = c.id_cultura
 JOIN Safra s ON p.id_safra = s.id_safra
-WHERE c.nome = 'Milho'
+WHERE c.id_cultura = 2
 GROUP BY s.ano
 ORDER BY s.ano;
 ```
@@ -247,7 +248,7 @@ SELECT e.nome AS Estado, AVG(p.produtividade) AS Produtividade_Media
 FROM Producao p
 JOIN Estado e ON p.id_estado = e.id_estado
 JOIN Cultura c ON p.id_cultura = c.id_cultura
-WHERE c.nome = 'Café'
+WHERE c..id_cultura = 3
 GROUP BY e.nome
 ORDER BY Produtividade_Media DESC;
 ```
